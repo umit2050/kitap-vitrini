@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kitap-vitrini.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Kitap Vitrini</title>
+</head>
+<body>
+        <div class="sol">
+            <!-- Üst -->
+            <h1>Kitap Vitrini</h1>
+            <p>Kitap Vitrini ile belli aralıklarda okuduğunuz ya da belli bir amaç için kategorize ettiğiniz kitapları kapaklarıyla derleyebilirsiniz.</p>
+                <div class="kitap-giris">
+                    <form name="kitap-form" id="kitap-form" class="kitap-form" method="GET">
+                        <input type="text" name="kitap-item" id="kitap-item" maxlength="200" value="" placeholder="kitap kapağı görselinin linkini giriniz...">
+                        <div class="kitap-ekle"><button id="ekle" type="submit">✔️<span class="span-ekle"> Ekle</span></button></div>
+                    </form>
+                </div>
+
+            
+            <!-- Özellikler -->
+            <div class="ozellikler">
+                <h2>Özelleştir:</h2>
+                <label for="listeGenislik">Liste genişliği (500-1200px)</label>
+                <input type="range" min="500" max="1200" value="800" class="slider" id="listeGenislik">
+                
+                <label for="kapakGenislik">Kitap kapağı yüksekliği (100-300px)</label>
+                <input type="range" min="100" max="300" value="200" class="slider" id="kapakGenislik">
+
+                <h2>Sil: </h2>
+                <div class="kitap-temizle"><button id="tekSil" class="silButon">🗑️ Tek tek silmek için göster / gizle</button></div>
+                <div class="kitap-temizle"><button id="temizle" class="silButon">🗑️ Tüm listeyi temizle</button></div>
+            </div>
+
+            <!-- Alt bilgi -->
+            <div class="alt-yazi">Ümit Büyükyıldırım 
+                <a href="https://twitter.com/umit2050" target="_blank"><i class="fab fa-fw fa-twitter text-info"></i></a> 
+                <a href="https://www.linkedin.com/in/uyildirim/" target="_blank"><i class="fab fa-fw fa-linkedin text-info"></i></a> 
+                <a href="https://github.com/umit2050" target="_blank"><i class="fab fa-fw fa-github text-info"></i></a> 
+            </div>
+        
+        </div>
+
+    <div class="sag">
+        <!-- Kitap listesi -->
+        <div id="liste" class="liste"></div>
+    </div>
+
+    <!-- JavaScript dosyası -->
+    <script src="kitap-vitrini.js"></script>
+    
+</body>
+</html>
