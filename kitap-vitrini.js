@@ -9,6 +9,7 @@ kitapEkle.onclick = function() {
     // div'leri oluşturuyoruz
     let kitap = document.createElement("div"); 
     kitap.className = "kitap";
+    kitap.innerHTML = document.createElement("img").src = kitapItem.value;
 
     let silDiv = document.createElement("div");
     silDiv.className = "silDiv";
@@ -145,5 +146,24 @@ kapakGenislik.onchange = function() {
     let deger = kapakGenislik.value;
     for (let i = 0; i < kapaklar.length; i++) {
         kapaklar[i].style.height = deger + "px";
-    }
+    }    
+}
+
+// Arkaplan rengini değiştirme
+let arkaplan = document.querySelector("#color");
+arkaplan.onchange = function() {
+    let deger = arkaplan.value;
+    document.querySelector(".sag").style.backgroundColor = deger;
+}
+
+// Liste içi hizalamayı değiştirme
+let listeHizala = document.querySelector("#listeHizala");
+listeHizala.onchange = function() {
+    let deger = listeHizala.value;
+    if(deger == "1")
+    document.querySelector("#liste").style.justifyContent = "left";
+    else if(deger == "2")
+    document.querySelector("#liste").style.justifyContent = "center";
+    else if(deger == "3")
+    document.querySelector("#liste").style.justifyContent = "right";
 }

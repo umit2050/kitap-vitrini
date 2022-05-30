@@ -36,14 +36,17 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-position: cover;
+    background-color: #ccc;
 }
 .kitapKapak{
-    width: auto;
+    width: 100%;
     height: 100%;
 }
 img {
-    width: flex;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .silDiv {
     width: 72px;
@@ -119,6 +122,17 @@ p {
 /* Özellikler */
 .ozellikler {
     margin-top: 30px;
+}
+.color-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.color {
+    width: 50%;
+    height: 50px;
+    margin-left: 60px;
 }
 /* Altyazı */
 .alt-yazi {

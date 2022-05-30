@@ -32,9 +32,20 @@
                 <label for="kapakGenislik">Kitap kapağı yüksekliği (100-300px)</label>
                 <input type="range" min="100" max="300" value="200" class="slider" id="kapakGenislik">
 
-                <h2>Sil: </h2>
-                <div class="kitap-temizle"><button id="tekSil" class="silButon">🗑️ Tek tek silmek için göster / gizle</button></div>
-                <div class="kitap-temizle"><button id="temizle" class="silButon">🗑️ Tüm listeyi temizle</button></div>
+                <label for="listeHizala">Kitap yerleşimini hizala (sola yasla - ortala - sağa yasla)</label>
+                <input type="range" min="1" max="3" value="1" class="slider" id="listeHizala">
+
+                <div class="color-form">
+                    <label for="body">Arkaplan rengini seç</label>
+                    <input type="color" id="color" class="color" name="body" value="#ffffff">
+                </div>
+
+                <!-- <div><button id="screenshot" class="screenshot">📷 Ekran görüntüsü al</button></div> -->
+
+                <h2>Sil:</h2>
+                <button id="tekSil" class="silButon">🗑️ Tek tek silmek için göster / gizle</button>
+                <button id="temizle" class="silButon">🗑️ Tüm listeyi temizle</button>
+                
             </div>
 
             <!-- Alt bilgi -->
