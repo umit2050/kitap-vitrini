@@ -153,7 +153,7 @@ kapakGenislik.onchange = function() {
 let arkaplan = document.querySelector("#color");
 arkaplan.onchange = function() {
     let deger = arkaplan.value;
-    document.querySelector(".sag").style.backgroundColor = deger;
+    document.querySelector(".liste").style.backgroundColor = deger;
 }
 
 // Liste içi hizalamayı değiştirme
@@ -167,3 +167,19 @@ listeHizala.onchange = function() {
     else if(deger == "3")
     document.querySelector("#liste").style.justifyContent = "right";
 }
+
+// Listenin ekran görüntüsü alma
+document.querySelector(".ss-button").addEventListener("click", function() {
+const screenshotTarget = document.querySelector(".liste");
+ 
+html2canvas(screenshotTarget,
+    {
+    logging: true, 
+    letterRendering: 1, 
+    allowTaint: false, 
+    useCORS: true,
+}).then(canvas => {
+const base64image = canvas.toDataURL("image/jpeg", 10, 10); // canvas.width, canvas.height
+window.location.href = base64image;
+});
+}, false);

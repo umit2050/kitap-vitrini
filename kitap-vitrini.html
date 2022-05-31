@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="kitap-vitrini.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js" integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Kitap Vitrini</title>
 </head>
@@ -26,25 +27,25 @@
             <!-- Özellikler -->
             <div class="ozellikler">
                 <h2>Özelleştir:</h2>
-                <label for="listeGenislik">Liste genişliği (500-1200px)</label>
-                <input type="range" min="500" max="1200" value="800" class="slider" id="listeGenislik">
+                <label for="listeGenislik">Liste genişliği (600-1200px)</label>
+                <input type="range" min="600" max="1200" value="800" class="slider" id="listeGenislik">
                 
                 <label for="kapakGenislik">Kitap kapağı yüksekliği (100-300px)</label>
                 <input type="range" min="100" max="300" value="200" class="slider" id="kapakGenislik">
 
-                <label for="listeHizala">Kitap yerleşimini hizala (sola yasla - ortala - sağa yasla)</label>
+                <label for="listeHizala">Liste yerleşimi</label>
                 <input type="range" min="1" max="3" value="1" class="slider" id="listeHizala">
 
                 <div class="color-form">
                     <label for="body">Arkaplan rengini seç</label>
-                    <input type="color" id="color" class="color" name="body" value="#ffffff">
+                    <input type="color" id="color" name="body" value="#f5f7ea">
                 </div>
 
-                <!-- <div><button id="screenshot" class="screenshot">📷 Ekran görüntüsü al</button></div> -->
+                <div><button id="ss-button" class="ss-button">📷 Ekran görüntüsü al</button></div>
 
                 <h2>Sil:</h2>
-                <button id="tekSil" class="silButon">🗑️ Tek tek silmek için göster / gizle</button>
-                <button id="temizle" class="silButon">🗑️ Tüm listeyi temizle</button>
+                <button id="tekSil" class="silButon">Tek tek silmek için göster / gizle</button>
+                <button id="temizle" class="silButon">Tüm listeyi temizle</button>
                 
             </div>
 
