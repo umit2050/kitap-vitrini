@@ -183,3 +183,9 @@ const base64image = canvas.toDataURL("image/jpeg", 10, 10); // canvas.width, can
 window.location.href = base64image;
 });
 }, false);
+
+// Ekran görüntüsü alma butonunun sadece Firefox'ta görünmesi için
+let isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+if(!isFirefox) {
+    document.querySelector(".ss-button").style.display = "none";
+}
